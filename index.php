@@ -79,6 +79,16 @@
       } elseif ($page == 'catalog') {
         require('templates/catalog.php');
       } elseif ($page == 'product') {
+        $id = $_GET['id'];
+        $product = [];
+
+        foreach ($goods as $item) {
+          if ($item['id'] == $id) {
+            $product = $item;
+            break;
+          }
+        }
+        
         require('templates/product.php');
       }
     ?>

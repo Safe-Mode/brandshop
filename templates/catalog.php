@@ -1,61 +1,24 @@
 <h1>
   Каталог товаров
 </h1>
+
 <div>
-  <div class="shopUnit">
-    <img src="http://placehold.it/308x231" />
+  <?php foreach ($goods as $product) : ?>
+    <div class="shopUnit">
+      <img src="<?=$product['image']?>" />
 
-    <div class="shopUnitName">
-      Название продукта
+      <div class="shopUnitName">
+        <?=$product['title']?>
+      </div>
+      <div class="shopUnitShortDesc">
+        <?=$product['desc']?>
+      </div>
+      <div class="shopUnitPrice">
+        Цена: <?=$product['price']?>
+      </div>
+      <a href="index.php?page=product&id=<?=$product['id']?>" class="shopUnitMore">
+        Подробнее
+      </a>
     </div>
-    <div class="shopUnitShortDesc">
-      Здесь будет немного текста описывающего продукт.
-      Здесь будет немного текста описывающего продукт.
-      Здесь будет немного текста описывающего продукт.
-    </div>
-    <div class="shopUnitPrice">
-      Цена: 0000 $
-    </div>
-    <a href="#" class="shopUnitMore">
-      Подробнее
-    </a>
-  </div>
-
-  <div class="shopUnit">
-    <img src="http://placehold.it/308x231" />
-
-    <div class="shopUnitName">
-      Название продукта
-    </div>
-    <div class="shopUnitShortDesc">
-      Здесь будет немного текста описывающего продукт.
-      Здесь будет немного текста описывающего продукт.
-      Здесь будет немного текста описывающего продукт.
-    </div>
-    <div class="shopUnitPrice">
-      Цена: 0000 $
-    </div>
-    <a href="#" class="shopUnitMore">
-      Подробнее
-    </a>
-  </div>
-
-  <div class="shopUnit">
-    <img src="http://placehold.it/308x231" />
-
-    <div class="shopUnitName">
-      Название продукта
-    </div>
-    <div class="shopUnitShortDesc">
-      Здесь будет немного текста описывающего продукт.
-      Здесь будет немного текста описывающего продукт.
-      Здесь будет немного текста описывающего продукт.
-    </div>
-    <div class="shopUnitPrice">
-      Цена: 0000 $
-    </div>
-    <a href="#" class="shopUnitMore">
-      Подробнее
-    </a>
-  </div>
+  <?php endforeach; ?>
 </div>
